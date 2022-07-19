@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback function demonstration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="aboutpic">
+      <img
+        src="https://images.unsplash.com/photo-1470399542183-e6245d78c479?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2f37382c0d0203b8be43fea0a8380965&auto=format&fit=crop&w=1334&q=80"
+        class="img-responsive"
+      />
+      <button class="btn" id="cbtn">Callback demonstrator</button>
+      <h1 id="h1" class="btn2">After button click this text will change!</h1>
+    </div>
+    <script>
+      document.getElementById("cbtn").addEventListener("click", function () {
+        function click() {
+          document.getElementById(
+            "h1"
+          ).innerHTML = `User has clicked on the button it appeared after 5 seconds`;
+          console.log(count);
+        }
+        ///callback function
+        setTimeout(click, 5000);
+      });
+    </script>
+  </body>
+</html>
